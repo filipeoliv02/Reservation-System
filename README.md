@@ -1,41 +1,8 @@
-### Projeto Prático de Desenvolvimento de Software
+# Projeto Prático de Desenvolvimento de Software
 
-# Gestão de Reservas em Alojamento
+## Gestão de Reservas em Alojamento Local
 
-# Local
-
-## Usando Estruturas Dinâmicas de Dados em C
-
-### Linguagens de Programação 1
-
-### Rui Silva Moreira
-
-### rmoreira@ufp.edu.pt
-
-### Bruno Gomes
-
-### bagomes@ufp.edu.pt
-
-### Algoritmos e Estruturas de Dados 1
-
-### José Torres
-
-### jtorres@ufp.edu.pt
-
-### Bruno Gomes
-
-### bagomes@ufp.edu.pt
-
-### (versão 1.0)
-
-### Outubro de 2020
-
-### Universidade Fernando Pessoa
-
-### Faculdade de Ciência e Tecnologia
-
-
-## Descrição do problema
+### Descrição do problema
 
 Uma empresa de alojamento local do Porto, a PortoFlats, possui S estúdios (e.g. S = 50+) para
 alojamento local, distribuídos por E edifícios distintos (e.g. E = 3+), situados em diferentes
