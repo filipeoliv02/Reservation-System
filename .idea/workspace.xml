@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="AED1_LP1" targetName="AED1_LP1" />
@@ -11,7 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="" />
+    <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="README.md update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
     <configuration name="AED1_LP1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AED1_LP1" TARGET_NAME="AED1_LP1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AED1_LP1" RUN_TARGET_NAME="AED1_LP1">
@@ -59,11 +80,64 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605384321845</updated>
-      <workItem from="1605384322935" duration="29000" />
+      <workItem from="1605384322935" duration="1493000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1605384368832</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605384368832</updated>
+    </task>
+    <task id="LOCAL-00002" summary="README.md update">
+      <created>1605384565366</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605384565366</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="README.md update" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1418" height="281" key="GridCell.Tab.0.bottom" timestamp="1605390284240">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1418" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1605390284240" />
+    <state width="1418" height="281" key="GridCell.Tab.0.center" timestamp="1605390284240">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1418" height="281" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1605390284240" />
+    <state width="1418" height="281" key="GridCell.Tab.0.left" timestamp="1605390284240">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1418" height="281" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1605390284240" />
+    <state width="1418" height="281" key="GridCell.Tab.0.right" timestamp="1605390284240">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1418" height="281" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1605390284240" />
+    <state x="235" y="226" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1605384579861">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="235" y="226" width="802" height="523" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1605384579861" />
   </component>
 </project>
