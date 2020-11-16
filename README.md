@@ -40,10 +40,13 @@ de um conjunto de regras:
 ● A configuração do estúdio poderá afectar o preço (e.g. ser duplex ou ter terraço pode
 aplicar uma taxa extra);
 
-● A duração da estadia: i) menos de uma semana; ii) uma semana e menos de um mês;
-iii) um mês ou mais (NB: a faturação para durações superiores a um mês pode ser feita
-ao mês ou em frações de ½ mês em vez de ser feita ao dia);
+● A duração da estadia: 
+    
+    i) menos de uma semana; 
 
+    ii) uma semana e menos de um mês;
+
+    iii) um mês ou mais (NB: a faturação para durações superiores a um mês pode ser feita ao mês ou em frações de ½ mês em vez de ser feita ao dia);
 
 
 ● A altura ou época do ano, como por exemplo, através de uma divisão entre época baixa
