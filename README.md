@@ -161,8 +161,11 @@ A implementação deverá endereçar os seguintes requisitos funcionais:
 ### Cotação dos Requisitos em AED1 e LP
 
 Req 1 2 3 4 5 6 7 8 9
+
 AED1 1.5 3 2 3 2 2 2 2 2.
+
 LP1 1.5 3 2 3 2 2 2 2 2.
+
 (NB: cotação 0-20)
 
 ### Processo de Submissão
