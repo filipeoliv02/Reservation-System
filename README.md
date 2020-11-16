@@ -55,12 +55,11 @@ e época alta (e.g. ao fim de semana, a estadia é normalmente mais cara);
 ● A plataforma onde é efectuada a reserva poderá aplicar preços e promoções
 específicas;
 
-● A modalidade de reserva: i) ao estúdio, em que o hóspede reserva o alojamento para
-um estúdio em particular; ii) à estadia, em que o hóspede apenas escolhe o período de
-alojamento e a tipologia do estúdio e a PortoFlats escolhe qual o estúdio em que o
-hóspede ficará alojado. Nesta segunda modalidade, a PortoFlats tem uma oportunidade
-de otimização de ocupação dos estúdios, por esse motivo, a tarifa poderá ser mais
-atrativa;
+● A modalidade de reserva: 
+    
+    i) ao estúdio, em que o hóspede reserva o alojamento para um estúdio em particular; 
+    
+    ii) à estadia, em que o hóspede apenas escolhe o período de alojamento e a tipologia do estúdio e a PortoFlats escolhe qual o estúdio em que o hóspede ficará alojado. Nesta segunda modalidade, a PortoFlats tem uma oportunidade de otimização de ocupação dos estúdios, por esse motivo, a tarifa poderá ser mais atrativa;
 
 ● Antecedência da reserva (cf. normal, antecipada, última hora).
 
