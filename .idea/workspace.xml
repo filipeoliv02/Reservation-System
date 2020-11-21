@@ -29,9 +29,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="add todo pdf">
+    <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="added comment">
+      <change afterPath="$PROJECT_DIR$/structs.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AED1_LP1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AED1_LP1.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +73,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -81,7 +87,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605384321845</updated>
-      <workItem from="1605384322935" duration="3721000" />
+      <workItem from="1605384322935" duration="3754000" />
+      <workItem from="1605970171871" duration="26000" />
+      <workItem from="1605970205637" duration="57000" />
+      <workItem from="1605978040348" duration="720000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605384368832</created>
@@ -104,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605390330708</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added comment">
+      <created>1605399788585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605399788585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,33 +136,35 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="README.md update" />
     <MESSAGE value="add todo pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="add todo pdf" />
+    <MESSAGE value="added comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comment" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1418" height="281" key="GridCell.Tab.0.bottom" timestamp="1605396315667">
+    <state width="1683" height="281" key="GridCell.Tab.0.bottom" timestamp="1605399811320">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1418" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1605396315667" />
-    <state width="1418" height="281" key="GridCell.Tab.0.center" timestamp="1605396315666">
+    <state width="1683" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1605399811320" />
+    <state width="1683" height="281" key="GridCell.Tab.0.center" timestamp="1605399811320">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1418" height="281" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1605396315666" />
-    <state width="1418" height="281" key="GridCell.Tab.0.left" timestamp="1605396315666">
+    <state width="1683" height="281" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1605399811320" />
+    <state width="1683" height="281" key="GridCell.Tab.0.left" timestamp="1605399811320">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1418" height="281" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1605396315666" />
-    <state width="1418" height="281" key="GridCell.Tab.0.right" timestamp="1605396315666">
+    <state width="1683" height="281" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1605399811320" />
+    <state width="1683" height="281" key="GridCell.Tab.0.right" timestamp="1605399811320">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1418" height="281" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1605396315666" />
-    <state x="234" y="202" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1605390336601">
+    <state width="1683" height="281" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1605399811320" />
+    <state x="233" y="178" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1605399795719">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="234" y="202" width="802" height="523" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1605390336601" />
+    <state x="233" y="178" width="802" height="523" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1605399795719" />
   </component>
 </project>

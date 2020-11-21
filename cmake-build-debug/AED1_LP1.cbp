@@ -79,6 +79,9 @@
 		<Unit filename="/home/filipe/Projects/AED1-LP1/main.c">
 			<Option target="AED1_LP1"/>
 		</Unit>
+		<Unit filename="/home/filipe/Projects/AED1-LP1/structs.h">
+			<Option target="AED1_LP1"/>
+		</Unit>
 		<Unit filename="/home/filipe/Projects/AED1-LP1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
