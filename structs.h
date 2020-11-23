@@ -1,6 +1,5 @@
 #ifndef AED1_LP1_STRUCTS_H
 #define AED1_LP1_STRUCTS_H
-#define MAX 100
 
 /**
  * @brief tipo de dados para datas
@@ -15,17 +14,6 @@ typedef struct date {
 } DATE;
 
 /**
- * @brief tipo de dados para as diversas plataformas
- * @details name é o nome da plataforma. website é a hiperligação
- * da página online da plataforma e contem a sua agenda
- */
-typedef struct platform {
-  char name[MAX];
-  char website[MAX];
-  struct agenda agenda;
-} PLATFORM;
-
-/**
  * @brief Tipo de Dados para registo de envetos
  * @details Estrutura de dados para registo/leitura de eventos, os eventos
  * têm relação directar com ->Plataform.
@@ -37,7 +25,6 @@ typedef struct platform {
 typedef struct event {
   struct date check_in;
   struct date check_out;
-  struct platform name;
 } EVENT;
 
 /**
@@ -49,14 +36,25 @@ typedef struct agenda {
 } AGENDA;
 
 /**
+ * @brief tipo de dados para as diversas plataformas
+ * @details name é o nome da plataforma. website é a hiperligação
+ * da página online da plataforma e contem a sua agenda
+ */
+typedef struct platform {
+  char* name;
+  char* website;
+  struct agenda agenda;
+} PLATFORM;
+
+/**
  * @brief Tipo de dados que guarda as moradas dos estúdios
  * @details contém a rua, o piso do edificio,
  * o código postal, a latitude e a longitude
  */
 typedef struct address {
-  char street[MAX];
+  char* street;
   int floor;
-  char zip[MAX];
+  char* zip;
   double latitude;
   double longitude;
 } ADDRESS;
@@ -66,10 +64,9 @@ typedef struct address {
  * @details contém o nome do edificio, e aponta para o proximo edificio
  */
 typedef struct building {
-  char name[MAX];
-
+  char* name;
   struct building* next;
-
+  struct studio* studios;
 } BUILDING;
 
 /**
@@ -80,8 +77,7 @@ typedef struct building {
  */
 typedef struct studio {
   // char name alterar depois para tipo de estudio
-  char name[MAX];
-  BUILDING build;
+  char* name;
   struct address address;
 } STUDIO;
 
