@@ -81,4 +81,16 @@ typedef struct studio {
   struct address address;
 } STUDIO;
 
+/**
+ * @brief tipo de dados para definir os hóspedes
+ * @details contem o nome, a nacionalidade e o histórico de estadias do hóspede
+ *
+ */
+typedef struct guest {
+  char* name;
+  char* country;
+  STUDIO* history;
+} GUEST;
+
+
 #endif
