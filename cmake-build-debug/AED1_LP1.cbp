@@ -94,6 +94,12 @@
 		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/structs.h">
 			<Option target="AED1_LP1"/>
 		</Unit>
+		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/studios.c">
+			<Option target="AED1_LP1"/>
+		</Unit>
+		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/studios.h">
+			<Option target="AED1_LP1"/>
+		</Unit>
 		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

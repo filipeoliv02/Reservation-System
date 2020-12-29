@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/filipe/Projects/Gestor_de_Reservas-C/buildings.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/buildings.c.o"
   "/home/filipe/Projects/Gestor_de_Reservas-C/events.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/events.c.o"
   "/home/filipe/Projects/Gestor_de_Reservas-C/main.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/main.c.o"
+  "/home/filipe/Projects/Gestor_de_Reservas-C/studios.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/studios.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

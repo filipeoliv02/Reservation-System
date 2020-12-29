@@ -21,7 +21,7 @@ typedef struct event {
     char *platform;
 } EVENT;
 
-void read_events_file(char *fname, int value);
+void read_events_file(char *fname);
 
-
+void write_events_file(char *fname);
 #endif

@@ -223,6 +223,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/main.c.s
 .PHONY : main.c.s
 
+studios.o: studios.c.o
+
+.PHONY : studios.o
+
+# target to build an object file
+studios.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/studios.c.o
+.PHONY : studios.c.o
+
+studios.i: studios.c.i
+
+.PHONY : studios.i
+
+# target to preprocess a source file
+studios.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/studios.c.i
+.PHONY : studios.c.i
+
+studios.s: studios.c.s
+
+.PHONY : studios.s
+
+# target to generate assembly for a file
+studios.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/studios.c.s
+.PHONY : studios.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,6 +268,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... studios.o"
+	@echo "... studios.i"
+	@echo "... studios.s"
 .PHONY : help
 
 

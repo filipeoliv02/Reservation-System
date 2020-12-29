@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 typedef struct building {
     int id;
     char *name;
@@ -17,7 +16,7 @@ typedef struct building {
     struct studio *studios;
 } BUILDING;
 
-void read_buildings_file(char *fname,int value);
+void read_buildings_file(char *fname);
 void write_buildings_file(char *fname);
 
 #endif

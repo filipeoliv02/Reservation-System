@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AED1_LP1.dir/buildings.c.o"
   "CMakeFiles/AED1_LP1.dir/events.c.o"
   "CMakeFiles/AED1_LP1.dir/main.c.o"
+  "CMakeFiles/AED1_LP1.dir/studios.c.o"
 )
 
 # Per-language clean rules from dependency scanning.
