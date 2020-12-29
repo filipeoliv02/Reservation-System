@@ -20,14 +20,13 @@ void read_buildings_file(char *fname, int value) {
         fscanf(bfile, ",%[^,]s", build.address);
         fscanf(bfile, ",%lf[^\n]", &build.priceperday);
 
-        /**
-         * PARA EFEITOS DE TESTE
+
+
         printf("%d %s %lf %lf %s %lf\n", build.id, build.name, build.latitude, build.longitude, build.address,
                build.priceperday);
 
-         **/
 
-        fclose(bfile);
+        //fclose(bfile);
     }
 }
 

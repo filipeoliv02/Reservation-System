@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/Documents/Gestor_de_Reservas-C/buildings.c" "D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/buildings.c.obj"
-  "D:/Documents/Gestor_de_Reservas-C/main.c" "D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/main.c.obj"
+  "/home/filipe/Projects/Gestor_de_Reservas-C/buildings.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/buildings.c.o"
+  "/home/filipe/Projects/Gestor_de_Reservas-C/events.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/events.c.o"
+  "/home/filipe/Projects/Gestor_de_Reservas-C/main.c" "/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles/AED1_LP1.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
