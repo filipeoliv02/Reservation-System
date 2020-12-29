@@ -14,7 +14,8 @@ int main() {
     /*write_buildings_file("api_files/test2.csv");*/
    /*read_events_file("api_files/eventos.csv");*/
     //write_events_file("api_files/test.csv");
-    read_studios_file("api_files/estudios.csv");
+    //read_studios_file("api_files/estudios.csv");
+    write_studios_file("api_files/test.csv");
     return 0;
 }
 
