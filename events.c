@@ -14,19 +14,14 @@ void read_events_file(char *fname) {
     while (!feof(efile)) {
         fscanf(efile, "%d[^,]", &event.id);
         fscanf(efile, ",%[^,]s", event.type);
-
         fscanf(efile, ",%d[^-]", &event.check_in.year);
         fscanf(efile, "-%d[^-]", &event.check_in.month);
         fscanf(efile, "-%d[^,]", &event.check_in.day);
-
         fscanf(efile, ",%d[^-]", &event.check_out.year);
         fscanf(efile, "-%d[^-]", &event.check_out.month);
         fscanf(efile, "-%d[^,]", &event.check_out.day);
-
         fscanf(efile, ",%d[^,]", &event.guest);
-
         fscanf(efile, ",%d[^,]", &event.studio);
-
         fscanf(efile, ",%[^\n]s", event.platform);
 
         printf("%d %s %d-%d-%d %d-%d-%d %d %d %s\n", event.id, event.type,
