@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "AED1_LP1"
   "AED1_LP1.pdb"
+  "CMakeFiles/AED1_LP1.dir/buildings.c.o"
   "CMakeFiles/AED1_LP1.dir/main.c.o"
 )
 

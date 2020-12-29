@@ -67,10 +67,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/filipe/Projects/AED1-LP1
+CMAKE_SOURCE_DIR = /home/filipe/Projects/Gestor_de_Reservas-C
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/filipe/Projects/AED1-LP1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/filipe/Projects/AED1-LP1/cmake-build-debug/CMakeFiles /home/filipe/Projects/AED1-LP1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles /home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/filipe/Projects/AED1-LP1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,33 @@ AED1_LP1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/build
 .PHONY : AED1_LP1/fast
 
+buildings.o: buildings.c.o
+
+.PHONY : buildings.o
+
+# target to build an object file
+buildings.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/buildings.c.o
+.PHONY : buildings.c.o
+
+buildings.i: buildings.c.i
+
+.PHONY : buildings.i
+
+# target to preprocess a source file
+buildings.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/buildings.c.i
+.PHONY : buildings.c.i
+
+buildings.s: buildings.c.s
+
+.PHONY : buildings.s
+
+# target to generate assembly for a file
+buildings.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED1_LP1.dir/build.make CMakeFiles/AED1_LP1.dir/buildings.c.s
+.PHONY : buildings.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -178,6 +205,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AED1_LP1"
+	@echo "... buildings.o"
+	@echo "... buildings.i"
+	@echo "... buildings.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

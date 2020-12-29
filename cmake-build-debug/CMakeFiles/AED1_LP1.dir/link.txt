@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/AED1_LP1.dir/main.c.o -o AED1_LP1 
+/usr/bin/cc -g CMakeFiles/AED1_LP1.dir/main.c.o CMakeFiles/AED1_LP1.dir/buildings.c.o -o AED1_LP1 

@@ -40,12 +40,19 @@ typedef struct agenda {
   struct event event;
 } AGENDA;
 
-typedef struct policies{
+typedef struct policies {
   char* policies;
   char* platform;
-  char* rules[];
-}POLICIES;
-/**
+  char** rules;
+} POLICIES;
+
+typedef struct studio_policies {
+  int studio;
+  POLICIES policy;
+  char** rules;
+} STUDIO_POLICIES;
+
+/***
  * @brief tipo de dados para as diversas plataformas
  * @details name é o nome da plataforma. website é a hiperligação
  * da página online da plataforma e contem a sua agenda
@@ -55,7 +62,6 @@ typedef struct platform {
   char* website;
   struct agenda agenda;
 } PLATFORM;
-
 
 /**
  * @brief Tipo de dados que define os edificios
@@ -97,6 +103,5 @@ typedef struct guest {
   char* country;
   STUDIO* history;
 } GUEST;
-
 
 #endif

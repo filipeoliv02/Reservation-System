@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/filipe/Projects/AED1-LP1/main.c
+/home/filipe/Projects/Gestor_de_Reservas-C/buildings.h
 stdio.h
 -
+stdlib.h
+-
+string.h
+-
+utils.h
+-
+
+/home/filipe/Projects/Gestor_de_Reservas-C/main.c
+stdio.h
+-
+buildings.h
+/home/filipe/Projects/Gestor_de_Reservas-C/buildings.h
 
