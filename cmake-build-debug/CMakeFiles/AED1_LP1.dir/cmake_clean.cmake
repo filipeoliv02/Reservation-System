@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "AED1_LP1"
+  "AED1_LP1.exe"
+  "AED1_LP1.exe.manifest"
   "AED1_LP1.pdb"
-  "CMakeFiles/AED1_LP1.dir/buildings.c.o"
-  "CMakeFiles/AED1_LP1.dir/main.c.o"
+  "CMakeFiles/AED1_LP1.dir/buildings.c.obj"
+  "CMakeFiles/AED1_LP1.dir/main.c.obj"
+  "libAED1_LP1.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

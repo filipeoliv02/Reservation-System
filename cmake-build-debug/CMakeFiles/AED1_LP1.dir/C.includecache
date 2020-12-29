@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/filipe/Projects/Gestor_de_Reservas-C/buildings.h
+D:/Documents/Gestor_de_Reservas-C/buildings.c
+buildings.h
+D:/Documents/Gestor_de_Reservas-C/buildings.h
+
+D:/Documents/Gestor_de_Reservas-C/buildings.h
 stdio.h
 -
 stdlib.h
 -
 string.h
 -
-utils.h
--
 
-/home/filipe/Projects/Gestor_de_Reservas-C/main.c
+D:/Documents/Gestor_de_Reservas-C/main.c
 stdio.h
 -
 buildings.h
-/home/filipe/Projects/Gestor_de_Reservas-C/buildings.h
+D:/Documents/Gestor_de_Reservas-C/buildings.h
 
