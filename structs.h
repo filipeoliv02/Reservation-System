@@ -23,8 +23,13 @@ typedef struct date {
  * plataform
  */
 typedef struct event {
+  int id;
+  char* type;
   struct date check_in;
   struct date check_out;
+  int guest;
+  int studio;
+  char* plataform;
 } EVENT;
 
 /**
@@ -35,6 +40,11 @@ typedef struct agenda {
   struct event event;
 } AGENDA;
 
+typedef struct policies{
+  char* policies;
+  char* platform;
+  char* rules[];
+}POLICIES;
 /**
  * @brief tipo de dados para as diversas plataformas
  * @details name é o nome da plataforma. website é a hiperligação
@@ -46,25 +56,18 @@ typedef struct platform {
   struct agenda agenda;
 } PLATFORM;
 
-/**
- * @brief Tipo de dados que guarda as moradas dos estúdios
- * @details contém a rua, o piso do edificio,
- * o código postal, a latitude e a longitude
- */
-typedef struct address {
-  char* street;
-  int floor;
-  char* zip;
-  double latitude;
-  double longitude;
-} ADDRESS;
 
 /**
  * @brief Tipo de dados que define os edificios
  * @details contém o nome do edificio, e aponta para o proximo edificio
  */
 typedef struct building {
+  int id;
   char* name;
+  double latitude;
+  double longitude;
+  char* address;
+  double priceperday;
   struct building* next;
   struct studio* studios;
 } BUILDING;
@@ -77,8 +80,11 @@ typedef struct building {
  */
 typedef struct studio {
   // char name alterar depois para tipo de estudio
-  char* name;
-  struct address address;
+  int id;
+  int number;
+  int building;
+  char* config;
+  int area;
 } STUDIO;
 
 /**
