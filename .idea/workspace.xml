@@ -32,11 +32,10 @@
     <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="added comment">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_files/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_files/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildings.c" beforeDir="false" afterPath="$PROJECT_DIR$/buildings.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studios.c" beforeDir="false" afterPath="$PROJECT_DIR$/studios.c" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,6 +104,7 @@
       <workItem from="1609258888210" duration="432000" />
       <workItem from="1609259347802" duration="958000" />
       <workItem from="1609277573352" duration="358000" />
+      <workItem from="1609409678132" duration="2737000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605384368832</created>
@@ -145,7 +145,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
