@@ -30,9 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="added comment">
+      <change beforePath="$PROJECT_DIR$/api_files/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_files/test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildings.c" beforeDir="false" afterPath="$PROJECT_DIR$/buildings.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildings.h" beforeDir="false" afterPath="$PROJECT_DIR$/buildings.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <workItem from="1609259347802" duration="958000" />
       <workItem from="1609277573352" duration="358000" />
       <workItem from="1609409678132" duration="2737000" />
-      <workItem from="1609597149963" duration="4292000" />
+      <workItem from="1609597149963" duration="4586000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605384368832</created>
@@ -177,7 +176,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/buildings.c</url>
-          <line>107</line>
+          <line>109</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

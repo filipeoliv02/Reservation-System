@@ -64,6 +64,7 @@ void read_buildings_to_List(char *fname) {
         if(L==NULL){
             build.name = malloc(sizeof(build.name));
             build.address = malloc(sizeof(build.address));
+
             L=(BUILDING*)malloc (1*sizeof(BUILDING));
 
             fscanf(bfile, "%d[^,]", (&build.id));
@@ -82,13 +83,11 @@ void read_buildings_to_List(char *fname) {
         else {
             aux->next=(BUILDING*)malloc (1*sizeof(BUILDING));
 
-            aux->name = malloc(sizeof(build.name));
-            aux->address = malloc(sizeof(build.address));
-
             aux=aux->next;
             fscanf(bfile, "%d[^,]",(&build.id));
             aux->id=build.id;
-            fscanf(bfile, ",%[^,]s", aux->name=build.name);
+            fscanf(bfile, ",%[^,]s",build.name);
+            aux->name=build.name;
             fscanf(bfile, ",%lf[^,]", &build.latitude);
             aux->latitude=build.latitude;
             fscanf(bfile, ",%lf[^,]", &build.longitude);
@@ -112,7 +111,7 @@ void show_build_list(BUILDING *L){
     else {
         //enquanto houver nodos..
         while(L!=NULL){
-            printf( "ID: %d, NAME: %s, LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", L->id, L->name,
+            printf( "ID: %d, NAME: %s , LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", L->id, L->name,
                     L->latitude,L->longitude,L->address, L->priceperday);
 
             L=L->next;
