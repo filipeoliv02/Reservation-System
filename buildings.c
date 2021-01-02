@@ -119,7 +119,12 @@ BUILDING_LIST* read_buildings_to_List(char *fname) {
 
 
 
-
+/**
+ * Add to last position a new Build
+ * @param building
+ * @param buildingList
+ * @return
+ */
 BUILDING_LIST* add_buildings_to_list_tail(BUILDING *building,BUILDING_LIST* buildingList)
 {
 

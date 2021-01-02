@@ -18,6 +18,7 @@ int main() {
     //read_studios_file("api_files/estudios.csv");
     //write_studios_file("api_files/test.csv");
     read_buildings_to_List("api_files/edificios.csv");
+    add_buildings_to_list_tail();
 
 
 
