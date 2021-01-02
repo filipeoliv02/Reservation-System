@@ -17,6 +17,10 @@ typedef struct building {
 
 } BUILDING;
 
+typedef struct building_list {
+    BUILDING *pbuildings;
+} BUILDING_LIST;
+
 void read_buildings_file(char *fname);
 void write_buildings_file(char *fname);
 void read_buildings_to_List(char *fname);
