@@ -125,7 +125,7 @@ BUILDING_LIST* read_buildings_to_List(char *fname) {
  * @param buildingList
  * @return
  */
-BUILDING_LIST* add_buildings_to_list_tail(BUILDING *building,BUILDING_LIST* buildingList)
+BUILDING_LIST* add_buildings_to_list_tail(BUILDING* building,BUILDING_LIST* buildingList)
 {
 
     if (building == NULL || buildingList==NULL){
@@ -136,9 +136,9 @@ BUILDING_LIST* add_buildings_to_list_tail(BUILDING *building,BUILDING_LIST* buil
         while(aux->next!=NULL){
             aux=aux->next;
         }
-
         aux->next=building;
         building->next=NULL;
+        buildingList->Size++;
     }
 }
 
@@ -156,4 +156,18 @@ void show_build_list(BUILDING *L){
         }
     }
     return;
+}
+
+BUILDING* creat_random_building() {
+    BUILDING *build;
+    build->name = malloc(sizeof(char)*100);
+    build->address = malloc(sizeof(char)*100);
+
+    build->id = 43;
+    build->name = "this is a test";
+    build->latitude = 1.32322;
+    build->longitude = 82.32322;
+    build->address = "random address";
+    build->priceperday = 34.98;
+    return (build);
 }

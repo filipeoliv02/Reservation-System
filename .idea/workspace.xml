@@ -30,6 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="added comment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildings.c" beforeDir="false" afterPath="$PROJECT_DIR$/buildings.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildings.h" beforeDir="false" afterPath="$PROJECT_DIR$/buildings.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
@@ -177,8 +178,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/buildings.c</url>
-          <line>109</line>
-          <option name="timeStamp" value="28" />
+          <line>129</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/buildings.c</url>
+          <line>161</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

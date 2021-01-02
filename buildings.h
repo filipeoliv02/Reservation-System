@@ -22,10 +22,12 @@ typedef struct building_list {
     int Size;
 } BUILDING_LIST;
 
+
+BUILDING* creat_random_building();
 void read_buildings_file(char *fname);
 void write_buildings_file(char *fname);
 BUILDING_LIST* read_buildings_to_List(char *fname);
 void show_build_list(BUILDING *L);
-BUILDING_LIST* add_buildings_to_list_tail(BUILDING *building,BUILDING_LIST* buildingList);
+BUILDING_LIST* add_buildings_to_list_tail(BUILDING* building,BUILDING_LIST* buildingList);
 
 #endif
