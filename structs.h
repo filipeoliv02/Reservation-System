@@ -70,7 +70,7 @@ typedef struct platform {
 typedef struct building {
   int id;
   char* name;
-  double latitude;
+  double *latitude;
   double longitude;
   char* address;
   double priceperday;
