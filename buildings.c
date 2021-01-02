@@ -164,10 +164,40 @@ BUILDING* creat_random_building() {
     build->address = malloc(sizeof(char)*100);
 
     build->id = 43;
-    build->name = "this is a test";
-    build->latitude = 1.32322;
-    build->longitude = 82.32322;
+    build->name = "this is a test random";
+    build->latitude = 1.232;
+    build->longitude = 35.32322;
     build->address = "random address";
-    build->priceperday = 34.98;
+    build->priceperday = 34.64454;
     return (build);
+}
+
+BUILDING_LIST* delete_last_building_in_list(BUILDING_LIST* buildingList)
+{
+
+    if (buildingList==NULL){
+        printf("File not Found - 404 delete_last_building_in_list\n");
+        exit(1);
+    }
+    else if (buildingList->Size == 1) {
+        free(buildingList->pbuildings);
+        buildingList->Size = 0;
+
+        return buildingList;
+    }
+    else {
+        BUILDING *aux = buildingList->pbuildings;
+        while(aux->next!=NULL){
+            aux=aux->next;
+        }
+
+        free(aux->next);
+        aux->next = NULL;
+
+        buildingList->pbuildings = aux;
+        buildingList->Size--;
+
+    }
+    return (buildingList);
+
 }
