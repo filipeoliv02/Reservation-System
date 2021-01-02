@@ -13,7 +13,7 @@ typedef struct building {
     char *address;
     double priceperday;
     struct building *next;
-    struct studio_array *studios;
+    struct studio_array **studios;
 
 } BUILDING;
 

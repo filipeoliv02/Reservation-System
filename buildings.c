@@ -56,59 +56,59 @@ void read_buildings_to_List(char *fname) {
         exit(1);
     }
 
-    BUILDING build;
+
     BUILDING *L=NULL, *aux;
 
     while (!feof(bfile)) {
         if(L==NULL){
 
-            build.name = malloc(sizeof(build.name));
-            build.address = malloc(sizeof(build.address));
-
             L=(BUILDING*)malloc (sizeof(BUILDING));
 
-            fscanf(bfile, "%d[^,]", (&build.id));
-            L->id=build.id;
-            fscanf(bfile, ",%[^,]s", build.name);
-            L->name=build.name;
-            fscanf(bfile, ",%lf[^,]", &build.latitude);
-            L->latitude=build.latitude;
-            fscanf(bfile, ",%lf[^,]", &build.longitude);
-            L->longitude=build.longitude;
-            fscanf(bfile, ",%[^,]s", build.address);
-            L->address=build.address;
-            fscanf(bfile, ",%lf[^\n]", &build.priceperday);
-            L->priceperday=build.priceperday;
+            L->name =(char*) malloc(sizeof(char)*100);
+            L->address =(char*) malloc(sizeof(char)*100);
+
+            //L=(BUILDING*)malloc (sizeof(BUILDING));
+
+            fscanf(bfile, "%d[^,]",&L->id);
+            //L->id=build.id;
+            fscanf(bfile, ",%[^,]s",L->name);
+            //L->name=build.name;
+            fscanf(bfile, ",%lf[^,]", &L->latitude);
+            //L->latitude=build.latitude;
+            fscanf(bfile, ",%lf[^,]", &L->longitude);
+            //L->longitude=build.longitude;
+            fscanf(bfile, ",%[^,]s", L->address);
+            //L->address=build.address;
+            fscanf(bfile, ",%lf[^\n]", &L->priceperday);
+            //L->priceperday=build.priceperday;
             aux=L;
         }
 
         else {
             aux->next=(BUILDING*)malloc (1*sizeof(BUILDING));
-            aux->name = malloc(sizeof(aux->name));
-            //aux->name=(char*)malloc(strlen(aux->name)+1);
-            //aux->address=(char*)malloc(strlen(aux->address)+1);
-            aux->address = malloc(sizeof(aux->address));
 
             aux=aux->next;
+            aux->name =(char*) malloc(sizeof(char)*100);
+            aux->address =(char*) malloc(sizeof(char)*100);
 
-            fscanf(bfile, "%d[^,]",(&build.id));
-            aux->id=build.id;
+            fscanf(bfile, "%d[^,]", &aux->id);
+            //aux->id=&L->id;
 
-            fscanf(bfile, ",%[^,]s",build.name);
-            aux->name=build.name;
+            fscanf(bfile, ",%[^,]s",aux->name);
+            //aux->name=build.name;
 
-            fscanf(bfile, ",%lf[^,]", &build.latitude);
-            aux->latitude=build.latitude;
+            fscanf(bfile, ",%lf[^,]", &aux->latitude);
+            //aux->latitude=build.latitude;
 
-            fscanf(bfile, ",%lf[^,]", &build.longitude);
-            aux ->longitude=build.longitude;
+            fscanf(bfile, ",%lf[^,]", &aux ->longitude);
+            //aux ->longitude=build.longitude;
 
-            fscanf(bfile, ",%[^,]s", build.address);
-            aux->address=build.address;
+            fscanf(bfile, ",%[^,]s", aux->address);
+            //aux->address=build.address;
 
-            fscanf(bfile, ",%lf[^\n]", &build.priceperday);
+            fscanf(bfile, ",%lf[^\n]", &aux->priceperday);
+            //aux->priceperday=build.priceperday;
 
-            aux->priceperday=build.priceperday;
             aux->next=NULL;
         }
     }
