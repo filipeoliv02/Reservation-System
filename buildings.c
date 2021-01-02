@@ -100,4 +100,23 @@ void read_buildings_to_List(char *fname) {
         }
     }
     fclose(bfile);
+    show_build_list(L);
+}
+
+
+void show_build_list(BUILDING *L){
+    if(L==NULL){
+        printf("A Lista esta vazia!\n");
+        return;
+    }
+    else {
+        //enquanto houver nodos..
+        while(L!=NULL){
+            printf( "ID: %d, NAME: %s, LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", L->id, L->name,
+                    L->latitude,L->longitude,L->address, L->priceperday);
+
+            L=L->next;
+        }
+    }
+    return;
 }
