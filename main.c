@@ -17,7 +17,7 @@ int main() {
     //write_events_file("api_files/test.csv");
     //read_studios_file("api_files/estudios.csv");
     //write_studios_file("api_files/test.csv");
-    read_buildings_to_List("api_files/test.csv");
+    read_buildings_to_List("api_files/edificios.csv");
 
 
 
