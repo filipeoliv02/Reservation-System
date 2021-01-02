@@ -19,11 +19,12 @@ typedef struct building {
 
 typedef struct building_list {
     BUILDING *pbuildings;
+    int Size;
 } BUILDING_LIST;
 
 void read_buildings_file(char *fname);
 void write_buildings_file(char *fname);
-void read_buildings_to_List(char *fname);
+BUILDING_LIST* read_buildings_to_List(char *fname);
 void show_build_list(BUILDING *L);
 
 #endif

@@ -39,6 +39,7 @@ void write_buildings_file(char *fname) {
     BUILDING build;
     build.name = malloc(sizeof(build.name));
     build.address = malloc(sizeof(build.address));
+
     build.id = 43;
     build.name = "this is a test";
     build.latitude = 1.32322;
@@ -49,17 +50,19 @@ void write_buildings_file(char *fname) {
             build.latitude, build.longitude, build.address, build.priceperday);
 }
 
-void read_buildings_to_List(char *fname) {
+BUILDING_LIST* read_buildings_to_List(char *fname) {
     FILE *bfile = fopen(fname, "r");
     if (bfile == NULL) {
         printf("File not Found - 404 read_buildings_file\n");
         exit(1);
     }
 
-
     BUILDING *L=NULL, *aux;
 
+    int count=0; //Contador de buildings
+
     while (!feof(bfile)) {
+        count=count+1;
         if(L==NULL){
 
             L=(BUILDING*)malloc (sizeof(BUILDING));
@@ -83,39 +86,56 @@ void read_buildings_to_List(char *fname) {
             //L->priceperday=build.priceperday;
             aux=L;
         }
-
         else {
-            aux->next=(BUILDING*)malloc (1*sizeof(BUILDING));
 
+            aux->next=(BUILDING*)malloc (1*sizeof(BUILDING));
             aux=aux->next;
             aux->name =(char*) malloc(sizeof(char)*100);
             aux->address =(char*) malloc(sizeof(char)*100);
-
             fscanf(bfile, "%d[^,]", &aux->id);
             //aux->id=&L->id;
-
             fscanf(bfile, ",%[^,]s",aux->name);
             //aux->name=build.name;
-
             fscanf(bfile, ",%lf[^,]", &aux->latitude);
             //aux->latitude=build.latitude;
-
             fscanf(bfile, ",%lf[^,]", &aux ->longitude);
             //aux ->longitude=build.longitude;
-
             fscanf(bfile, ",%[^,]s", aux->address);
             //aux->address=build.address;
-
             fscanf(bfile, ",%lf[^\n]", &aux->priceperday);
             //aux->priceperday=build.priceperday;
-
             aux->next=NULL;
         }
     }
-    //fclose(bfile);
-    show_build_list(L);
+    BUILDING_LIST *buildingList =(BUILDING_LIST*)malloc (sizeof(BUILDING_LIST));
+    buildingList->Size=count;
+    buildingList->pbuildings=L;
+
+    fclose(bfile);
+
+    return(buildingList);
+    //show_build_list(L);
 }
 
+
+
+
+BUILDING_LIST* add_buildings_to_list_tail(BUILDING *building,BUILDING_LIST* buildingList)
+{
+
+    if (building == NULL || buildingList==NULL){
+        return(buildingList);
+    }
+    else{
+        BUILDING *aux = buildingList->pbuildings;
+        while(aux->next!=NULL){
+            aux=aux->next;
+        }
+
+        aux->next=building;
+        building->next=NULL;
+    }
+}
 
 void show_build_list(BUILDING *L){
     if(L==NULL){
