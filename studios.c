@@ -8,7 +8,7 @@ STUDIO *read_studios_file(char *fname) {
     }
 
     STUDIO *studios = malloc(sizeof(STUDIO));
-
+    int i = 0;
     while (!feof(bfile)) {
 
         studios->config = malloc(sizeof(studios->config));
@@ -18,13 +18,10 @@ STUDIO *read_studios_file(char *fname) {
         fscanf(bfile, ",%[^,]s", studios->config);
         fscanf(bfile, ",%d[^,]s", &studios->area);
         printf("%d %d %d %s %d \n", studios->id, studios->number, studios->building, studios->config, studios->area);
-        studios++;
+        studios+=i;
+        i++;
     }
     fclose(bfile);
-    while(studios->id!=0){
-        studios--;
-    }
-    studios++;
 
     return studios;
 }
