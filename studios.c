@@ -17,28 +17,27 @@ STUDIO *read_studios_file(char *fname) {
         fscanf(bfile, ",%d[^,]", &studios->building);
         fscanf(bfile, ",%[^,]s", studios->config);
         fscanf(bfile, ",%d[^,]s", &studios->area);
-
-
         printf("%d %d %d %s %d \n", studios->id, studios->number, studios->building, studios->config, studios->area);
         studios++;
     }
     fclose(bfile);
+    while(studios->id!=0){
+        studios--;
+    }
+    studios++;
+
+    return studios;
 }
 
 
-void write_studios_file(char *fname) {
-    FILE *sfile = fopen(fname, "a");
-    STUDIO studio;
+void write_studios_file(STUDIO *studio_array, char *fname) {
+    FILE *sfile = fopen(fname, "w");
+    while (studio_array != NULL) {
 
-    studio.config = malloc(sizeof(studio.config));
-    studio.id = 75;
-    studio.number = 32;
-    studio.building = 4;
-    studio.config = "T100";
-    studio.area = 5;
-
-    fprintf(sfile, "%d,%d,%d,%s,%d\n", studio.id, studio.number,
-            studio.building, studio.config, studio.area);
+        studio_array->config = malloc(sizeof(studio_array->config));
+        fprintf(sfile, "%d,%d,%d,%s,%d\n", studio_array->id, studio_array->number,
+                studio_array->building, studio_array->config, studio_array->area);
+        studio_array++;
+    }
 }
 
-#include "studios.h"

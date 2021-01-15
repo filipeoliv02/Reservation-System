@@ -21,7 +21,7 @@ typedef struct studio {
 
 STUDIO *read_studios_file(char *fname);
 
-void write_studios_file(char *fname);
+void write_studios_file(STUDIO *studio_array, char *fname);
 
 
 #endif

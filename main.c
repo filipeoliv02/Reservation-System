@@ -20,8 +20,8 @@ int main() {
     //delete_last_building_in_list(buildingList);
 
     //STUDIOS
-    read_studios_file("api_files/estudios.csv");
-
+    STUDIO *studio_array=read_studios_file("api_files/estudios.csv");
+    write_studios_file(studio_array,"api_files/test.csv");
 
     return 0;
 }
