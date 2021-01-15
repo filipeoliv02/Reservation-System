@@ -1,7 +1,3 @@
-//
-// Created by filipe on 12/29/20.
-//
-
 #ifndef AED1_LP1_STUDIOS_H
 #define AED1_LP1_STUDIOS_H
 
@@ -16,17 +12,16 @@
  * e contém a morada
  */
 typedef struct studio {
-    // char name alterar depois para tipo de estudio
     int id;
     int number;
     int building;
-    char* config;
+    char *config;
     int area;
 } STUDIO;
 
-void read_studios_file(char *fname);
+STUDIO *read_studios_file(char *fname);
+
 void write_studios_file(char *fname);
 
 
-
-#endif //AED1_LP1_STUDIOS_H
+#endif

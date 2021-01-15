@@ -13,13 +13,12 @@ typedef struct building {
     char *address;
     double priceperday;
     struct building *next;
-    struct studio_array **studios;
-
+    struct studio **studios;
 } BUILDING;
 
 typedef struct building_list {
     BUILDING *pbuildings;
-    int Size;
+    int size;
 } BUILDING_LIST;
 
 
@@ -28,29 +27,31 @@ typedef struct building_list {
  * @param fname
  */
 void read_buildings_file(char *fname);
+
 /**
  * escrever uma no fim do ficheiro novo building
  * @param fname
  */
-void write_buildings_file(char *fname);
+void write_buildings_file(BUILDING_LIST *buildingList, char *fname);
 
 /**
  * Método para criar um novo build na lista em memoria;
  * @return build
  */
-BUILDING* creat_random_building();
+BUILDING *create_building();
 
 /**
  * Guardar numa lista ligada os buildings do ficheiro enviado em argumento do método
  * @param fname
  * @return
  */
-BUILDING_LIST* read_buildings_to_List(char *fname);
+BUILDING_LIST *read_buildings_to_list(char *fname);
+
 /**
  * método de teste para enviar para a consola a lista de buildings
  * @param L
  */
-void show_build_list(BUILDING *L);
+void show_build_list(BUILDING_LIST *L);
 
 /**
  * Adiciona na ultima posição da list build um novo build
@@ -58,12 +59,12 @@ void show_build_list(BUILDING *L);
  * @param buildingList
  * @return
  */
-BUILDING_LIST* add_buildings_to_list_tail(BUILDING* building,BUILDING_LIST* buildingList);
+BUILDING_LIST *add_buildings_to_list_tail(BUILDING *building, BUILDING_LIST *buildingList);
 
 /**
  * Apagar ultimo endereço da lista enviada em argumento
  * @param buildingList
  */
-BUILDING_LIST* delete_last_building_in_list(BUILDING_LIST* buildingList);
+BUILDING_LIST *delete_last_building_in_list(BUILDING_LIST *buildingList);
 
 #endif

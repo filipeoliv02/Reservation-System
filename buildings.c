@@ -1,5 +1,9 @@
 #include "buildings.h"
 
+/**
+ * @brief le ficheiro para uma lista ligada - deprecated
+ * @param fname file name
+ */
 void read_buildings_file(char *fname) {
     FILE *bfile = fopen(fname, "r");
     if (bfile == NULL) {
@@ -26,55 +30,55 @@ void read_buildings_file(char *fname) {
     fclose(bfile);
 }
 
-void write_buildings_file(char *fname) {
-    FILE *bfile = fopen(fname, "a");
-    /**
-     * Se for necessario obrigar um ficheiro esoecifico.
-    if (bfile == NULL) {
-        printf("File not Found - 404 write_buildings_file\n");
-        exit(1);
+/**
+ * @brief Escreve o que tem na lista ligada para o ficheiro
+ * @param buildingList
+ * @param fname
+ */
+void write_buildings_file(BUILDING_LIST *buildingList, char *fname) {
+    FILE *bfile = fopen(fname, "w");
+    BUILDING *aux = buildingList->pbuildings;
+
+    while (aux->next != NULL) {
+        fprintf(bfile, "%d,%s,%lf,%lf,%s,%lf\n", aux->id, aux->name,
+                aux->latitude, aux->longitude, aux->address, aux->priceperday);
+        aux = aux->next;
     }
-     **/
-
-    BUILDING build;
-    build.name = malloc(sizeof(build.name));
-    build.address = malloc(sizeof(build.address));
-
-    build.id = 43;
-    build.name = "this is a test";
-    build.latitude = 1.32322;
-    build.longitude = 82.32322;
-    build.address = "random address";
-    build.priceperday = 34.98;
-    fprintf(bfile, "%d,%s,%lf,%lf,%s,%lf\n", build.id, build.name,
-            build.latitude, build.longitude, build.address, build.priceperday);
+    fprintf(bfile, "%d,%s,%lf,%lf,%s,%lf\n", aux->id, aux->name,
+            aux->latitude, aux->longitude, aux->address, aux->priceperday);
+    fclose(bfile);
 }
 
-BUILDING_LIST* read_buildings_to_List(char *fname) {
+/**
+ * @brief lê do ficheiro para uma lista ligada e retorna a lista ligada
+ * @param fname
+ * @return a lista ligada
+ */
+BUILDING_LIST *read_buildings_to_list(char *fname) {
     FILE *bfile = fopen(fname, "r");
     if (bfile == NULL) {
         printf("File not Found - 404 read_buildings_file\n");
         exit(1);
     }
 
-    BUILDING *L=NULL, *aux;
+    BUILDING *L = NULL, *aux;
 
-    int count=0; //Contador de buildings
+    int count = 0; //Contador de buildings
 
     while (!feof(bfile)) {
-        count=count+1;
-        if(L==NULL){
+        count = count + 1;
+        if (L == NULL) {
 
-            L=(BUILDING*)malloc (sizeof(BUILDING));
+            L = (BUILDING *) malloc(sizeof(BUILDING));
 
-            L->name =(char*) malloc(sizeof(char)*100);
-            L->address =(char*) malloc(sizeof(char)*100);
+            L->name = (char *) malloc(sizeof(char) * 100);
+            L->address = (char *) malloc(sizeof(char) * 100);
 
             //L=(BUILDING*)malloc (sizeof(BUILDING));
 
-            fscanf(bfile, "%d[^,]",&L->id);
+            fscanf(bfile, "%d[^,]", &L->id);
             //L->id=build.id;
-            fscanf(bfile, ",%[^,]s",L->name);
+            fscanf(bfile, ",%[^,]s", L->name);
             //L->name=build.name;
             fscanf(bfile, ",%lf[^,]", &L->latitude);
             //L->latitude=build.latitude;
@@ -84,84 +88,89 @@ BUILDING_LIST* read_buildings_to_List(char *fname) {
             //L->address=build.address;
             fscanf(bfile, ",%lf[^\n]", &L->priceperday);
             //L->priceperday=build.priceperday;
-            aux=L;
-        }
-        else {
+            aux = L;
+        } else {
 
-            aux->next=(BUILDING*)malloc (1*sizeof(BUILDING));
-            aux=aux->next;
-            aux->name =(char*) malloc(sizeof(char)*100);
-            aux->address =(char*) malloc(sizeof(char)*100);
+            aux->next = (BUILDING *) malloc(1 * sizeof(BUILDING));
+            aux = aux->next;
+            aux->name = (char *) malloc(sizeof(char) * 100);
+            aux->address = (char *) malloc(sizeof(char) * 100);
             fscanf(bfile, "%d[^,]", &aux->id);
             //aux->id=&L->id;
-            fscanf(bfile, ",%[^,]s",aux->name);
+            fscanf(bfile, ",%[^,]s", aux->name);
             //aux->name=build.name;
             fscanf(bfile, ",%lf[^,]", &aux->latitude);
             //aux->latitude=build.latitude;
-            fscanf(bfile, ",%lf[^,]", &aux ->longitude);
+            fscanf(bfile, ",%lf[^,]", &aux->longitude);
             //aux ->longitude=build.longitude;
             fscanf(bfile, ",%[^,]s", aux->address);
             //aux->address=build.address;
             fscanf(bfile, ",%lf[^\n]", &aux->priceperday);
             //aux->priceperday=build.priceperday;
-            aux->next=NULL;
+            aux->next = NULL;
         }
     }
-    BUILDING_LIST *buildingList =(BUILDING_LIST*)malloc (sizeof(BUILDING_LIST));
-    buildingList->Size=count;
-    buildingList->pbuildings=L;
+    BUILDING_LIST *buildingList = (BUILDING_LIST *) malloc(sizeof(BUILDING_LIST));
+    buildingList->size = count;
+    buildingList->pbuildings = L;
 
     fclose(bfile);
 
-    return(buildingList);
+    return (buildingList);
     //show_build_list(L);
 }
-
 
 
 /**
  * Add to last position a new Build
  * @param building
  * @param buildingList
- * @return
+ * @return the linked list
  */
-BUILDING_LIST* add_buildings_to_list_tail(BUILDING* building,BUILDING_LIST* buildingList)
-{
+BUILDING_LIST *add_buildings_to_list_tail(BUILDING *building, BUILDING_LIST *buildingList) {
 
-    if (building == NULL || buildingList==NULL){
-        return(buildingList);
-    }
-    else{
+    if (building == NULL || buildingList == NULL) {
+        return (buildingList);
+    } else {
         BUILDING *aux = buildingList->pbuildings;
-        while(aux->next!=NULL){
-            aux=aux->next;
+        while (aux->next != NULL) {
+            aux = aux->next;
         }
-        aux->next=building;
-        building->next=NULL;
-        buildingList->Size++;
+        aux->next = building;
+        building->next = NULL;
+        buildingList->size++;
     }
+    return buildingList;
 }
 
-void show_build_list(BUILDING *L){
-    if(L==NULL){
+/**
+ * @brief prints to screen the content of the building list
+ * @param L
+ */
+void show_build_list(BUILDING_LIST *L) {
+    BUILDING *building = L->pbuildings;
+    if (building == NULL) {
         printf("A Lista esta vazia!\n");
         return;
-    }
-    else {
-        //enquanto houver nodos..
-        while(L!=NULL){
-            printf( "ID: %d, NAME: %s , LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", L->id, L->name,
-                    L->latitude,L->longitude,L->address, L->priceperday);
-            L=L->next;
+    } else {
+        //enquanto houver nodes..
+        while (building != NULL) {
+            printf("ID: %d, NAME: %s , LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", building->id, building->name,
+                   building->latitude, building->longitude, building->address, building->priceperday);
+            building = building->next;
         }
     }
-    return;
 }
 
-BUILDING* creat_random_building() {
+/**
+ * @brief create a building
+ * @return the building
+ */
+BUILDING *create_building() {
     BUILDING *build;
-    build->name = malloc(sizeof(char)*100);
-    build->address = malloc(sizeof(char)*100);
+    build = malloc(sizeof(BUILDING));
+    build->name = malloc(sizeof(build->name));
+    build->address = malloc(sizeof(build->address));
 
     build->id = 43;
     build->name = "this is a test random";
@@ -172,30 +181,30 @@ BUILDING* creat_random_building() {
     return (build);
 }
 
-BUILDING_LIST* delete_last_building_in_list(BUILDING_LIST* buildingList)
-{
+/**
+ * @brief removes the last node from the linked list
+ * @param buildingList
+ * @return returns the linked list without the tail node
+ */
+BUILDING_LIST *delete_last_building_in_list(BUILDING_LIST *buildingList) {
 
-    if (buildingList==NULL){
+    if (buildingList == NULL) {
         printf("File not Found - 404 delete_last_building_in_list\n");
         exit(1);
-    }
-    else if (buildingList->Size == 1) {
+    } else if (buildingList->size == 1) {
         free(buildingList->pbuildings);
-        buildingList->Size = 0;
+        buildingList->size = 0;
 
         return buildingList;
-    }
-    else {
+    } else {
         BUILDING *aux = buildingList->pbuildings;
-        while(aux->next!=NULL){
-            aux=aux->next;
+        while (aux->next->next != NULL) {
+            aux = aux->next;
         }
-
         free(aux->next);
         aux->next = NULL;
 
-        buildingList->pbuildings = aux;
-        buildingList->Size--;
+        buildingList->size--;
 
     }
     return (buildingList);
