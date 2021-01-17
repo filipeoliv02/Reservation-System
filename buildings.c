@@ -1,7 +1,7 @@
 #include "buildings.h"
 
 /**
- * @brief le ficheiro para uma lista ligada - deprecated
+ * @brief lê ficheiro para uma lista ligada - deprecated
  * @param fname file name
  */
 void read_buildings_file(char *fname) {
@@ -155,7 +155,8 @@ void show_build_list(BUILDING_LIST *L) {
     } else {
         //enquanto houver nodes..
         while (building != NULL) {
-            printf("ID: %d, NAME: %s , LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", building->id, building->name,
+            printf("ID: %d, NAME: %s , LATITUDE: %lf, LONGITUDE: %lf, ADRESS: %s, PRICEPERDAY: %lf \n", building->id,
+                   building->name,
                    building->latitude, building->longitude, building->address, building->priceperday);
             building = building->next;
         }
@@ -189,7 +190,7 @@ BUILDING *create_building() {
 BUILDING_LIST *delete_last_building_in_list(BUILDING_LIST *buildingList) {
 
     if (buildingList == NULL) {
-        printf("File not Found - 404 delete_last_building_in_list\n");
+        printf("Building list is NULL - 404 delete_last_building_in_list\n");
         exit(1);
     } else if (buildingList->size == 1) {
         free(buildingList->pbuildings);
@@ -209,4 +210,50 @@ BUILDING_LIST *delete_last_building_in_list(BUILDING_LIST *buildingList) {
     }
     return (buildingList);
 
+}
+
+BUILDING_LIST *delete_specific_building(BUILDING_LIST *buildingList, int id) {
+    if (buildingList == NULL) {
+        printf("Building list is NULL - 404 delete_specific_building\n");
+        exit(1);
+    }
+    BUILDING *aux = buildingList->pbuildings;
+    BUILDING *aux1 = buildingList->pbuildings;
+    while (1) {
+        if (aux->next->id == id) {
+            aux1 = aux->next;
+            aux->next = aux1->next;
+            free(aux1);
+            break;
+        }
+    }
+    buildingList->size--;
+    free(aux);
+
+    return (buildingList);
+}
+
+BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILDING *build) {
+    if (buildingList == NULL) {
+        buildingList->size++;
+        buildingList->pbuildings = build;
+        return buildingList;
+    }
+    if (pos > buildingList->size) {
+        pos = buildingList->size + 1;
+    }
+    BUILDING *aux = buildingList->pbuildings;
+    BUILDING *aux1 = build;
+    if (pos == 1) {
+        buildingList->pbuildings = build;
+        buildingList->pbuildings->next = aux;
+        return (buildingList);
+    }
+    for (int i = 0; i < pos - 2; i++) {
+        aux = aux->next;
+    }
+    aux1->next = aux->next;
+    aux->next = aux1;
+    buildingList->size++;
+    return (buildingList);
 }

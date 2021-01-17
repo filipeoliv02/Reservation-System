@@ -13,7 +13,7 @@ typedef struct building {
     char *address;
     double priceperday;
     struct building *next;
-    struct studio **studios;
+    struct studio *studios;
 } BUILDING;
 
 typedef struct building_list {
@@ -66,5 +66,10 @@ BUILDING_LIST *add_buildings_to_list_tail(BUILDING *building, BUILDING_LIST *bui
  * @param buildingList
  */
 BUILDING_LIST *delete_last_building_in_list(BUILDING_LIST *buildingList);
+
+BUILDING_LIST *delete_specific_building(BUILDING_LIST *buildingList, int id);
+
+BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILDING *build);
+
 
 #endif
