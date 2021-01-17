@@ -21,7 +21,7 @@ int main() {
     //find_specific_build(buildingList,2);
 
     //STUDIOS
-    STUDIO *studio_array=read_studios_file("api_files/estudios.csv","api_files/edificios.csv");
+    BUILDING_LIST *buildingList1 =read_studios_file("api_files/estudios.csv","api_files/edificio.csv");
     //write_studios_file(studio_array,"api_files/test.csv");
 
     return 0;

@@ -31,13 +31,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bdbc06c6-ea92-4e5e-9be8-4898a3d65063" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_files/edificios.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_files/edificios.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED1_LP1.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studios.c" beforeDir="false" afterPath="$PROJECT_DIR$/studios.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studios.h" beforeDir="false" afterPath="$PROJECT_DIR$/studios.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610913016475</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[TASK] correct method to read_studios_file to return BuildingList already linked to studios">
+      <created>1610916208582</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610916208582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +194,8 @@
     <MESSAGE value="started working on events" />
     <MESSAGE value="[TASK] creat method to find specific build by id" />
     <MESSAGE value="[TASK] correct method to read studio to array" />
-    <option name="LAST_COMMIT_MESSAGE" value="[TASK] correct method to read studio to array" />
+    <MESSAGE value="[TASK] correct method to read_studios_file to return BuildingList already linked to studios" />
+    <option name="LAST_COMMIT_MESSAGE" value="[TASK] correct method to read_studios_file to return BuildingList already linked to studios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -201,11 +204,6 @@
           <url>file://$PROJECT_DIR$/buildings.c</url>
           <line>191</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/studios.c</url>
-          <line>43</line>
-          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

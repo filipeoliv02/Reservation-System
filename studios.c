@@ -40,7 +40,6 @@ BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building poi
     }
 
     fclose(bfile);
-
     return buildingList;
 }
 
