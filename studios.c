@@ -11,9 +11,10 @@ STUDIO *read_studios_file(char *fname) { //building pointer
     STUDIO *aux = studios;
 
 
+
     while (!feof(bfile)) {
 
-        //STUDIO *aux = malloc(sizeof(STUDIO));
+
 
         aux->config = malloc(sizeof(aux->config));
 
@@ -25,6 +26,8 @@ STUDIO *read_studios_file(char *fname) { //building pointer
         printf("%d %d %d %s %d \n", aux->id, aux->number, aux->building, aux->config, aux->area);
 
 
+
+        STUDIO *aux = malloc(sizeof(STUDIO));
         //*(aux + (i * sizeof(STUDIO))) = *aux;
         aux++;
 
@@ -39,6 +42,12 @@ STUDIO *read_studios_file(char *fname) { //building pointer
 
 void write_studios_file(STUDIO *studio_array, char *fname) {
     FILE *sfile = fopen(fname, "w");
+
+    if (fname == NULL) {
+        printf("File not Found - 404 write_studios_file\n");
+        exit(1);
+    }
+
     while (studio_array != NULL) {
 
         studio_array->config = malloc(sizeof(studio_array->config));

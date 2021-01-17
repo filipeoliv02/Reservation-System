@@ -18,10 +18,10 @@ int main() {
     //add_buildings_to_list_tail(create_building(), buildingList);
     //show_build_list(buildingList);
     //delete_last_building_in_list(buildingList);
-    find_specific_build(buildingList,2);
+    //find_specific_build(buildingList,2);
 
     //STUDIOS
-    //STUDIO *studio_array=read_studios_file("api_files/estudios.csv");
+    STUDIO *studio_array=read_studios_file("api_files/estudios.csv");
     //write_studios_file(studio_array,"api_files/test.csv");
 
     return 0;
