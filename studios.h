@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "buildings.h"
 
 /**
  * @brief tipo de dados que define os estúdios
@@ -19,7 +20,7 @@ typedef struct studio {
     int area;
 } STUDIO;
 
-STUDIO *read_studios_file(char *fname);
+BUILDING_LIST *read_studios_file(char *fname, char *fbuildname);
 
 void write_studios_file(STUDIO *studio_array, char *fname);
 

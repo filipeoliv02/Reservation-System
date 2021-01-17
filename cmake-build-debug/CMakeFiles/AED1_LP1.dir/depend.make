@@ -12,6 +12,7 @@ CMakeFiles/AED1_LP1.dir/main.c.obj: ../events.h
 CMakeFiles/AED1_LP1.dir/main.c.obj: ../main.c
 CMakeFiles/AED1_LP1.dir/main.c.obj: ../studios.h
 
+CMakeFiles/AED1_LP1.dir/studios.c.obj: ../buildings.h
 CMakeFiles/AED1_LP1.dir/studios.c.obj: ../studios.c
 CMakeFiles/AED1_LP1.dir/studios.c.obj: ../studios.h
 

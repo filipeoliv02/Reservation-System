@@ -1,6 +1,13 @@
 #include "studios.h"
+#include "buildings.h"
 
-STUDIO *read_studios_file(char *fname) { //building pointer
+/**
+ * Read Studios in txt to link with list of buildings
+ * @param fname
+ * @param fbuildname
+ * @return
+ */
+BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building pointer
     FILE *bfile = fopen(fname, "r");
     if (bfile == NULL) {
         printf("File not Found - 404 read_buildings_file\n");
@@ -9,12 +16,10 @@ STUDIO *read_studios_file(char *fname) { //building pointer
 
     STUDIO *studios = malloc(sizeof(STUDIO));
     STUDIO *aux = studios;
-
-
+    //BUILDING_LIST *buildingList= malloc (sizeof(struct building_list));
+    BUILDING_LIST *buildingList =read_buildings_to_list(fbuildname);
 
     while (!feof(bfile)) {
-
-
 
         aux->config = malloc(sizeof(aux->config));
 
@@ -25,20 +30,19 @@ STUDIO *read_studios_file(char *fname) { //building pointer
         fscanf(bfile, ",%d[^,]s", &aux->area);
         printf("%d %d %d %s %d \n", aux->id, aux->number, aux->building, aux->config, aux->area);
 
-
-
         STUDIO *aux = malloc(sizeof(STUDIO));
-        //*(aux + (i * sizeof(STUDIO))) = *aux;
+
+        BUILDING *build = find_specific_build(buildingList,studios->building);
+        if(build!= NULL){
+            build->studios = studios;
+        }
         aux++;
-
     }
-
 
     fclose(bfile);
 
-    return studios;
+    return buildingList;
 }
-
 
 void write_studios_file(STUDIO *studio_array, char *fname) {
     FILE *sfile = fopen(fname, "w");
