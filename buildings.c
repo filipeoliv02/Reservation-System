@@ -257,3 +257,24 @@ BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILD
     buildingList->size++;
     return (buildingList);
 }
+
+/**
+ * Find specific build by his id
+ * @param buildingList
+ * @param id
+ * @return
+ */
+BUILDING* find_specific_build (BUILDING_LIST *buildingList, int id) {
+    if (buildingList == NULL) {
+        printf("Building list is NULL - 404 find_specific_build\n");
+        return 0;
+    }
+
+    BUILDING *aux = buildingList->pbuildings;
+
+    for (int i = 0;  aux->id!=id ; i++ || i <= buildingList->size ) {
+        aux = aux->next;
+    }
+
+    return (aux);
+}

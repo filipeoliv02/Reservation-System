@@ -71,5 +71,6 @@ BUILDING_LIST *delete_specific_building(BUILDING_LIST *buildingList, int id);
 
 BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILDING *build);
 
+BUILDING* find_specific_build (BUILDING_LIST *buildingList, int id);
 
 #endif
