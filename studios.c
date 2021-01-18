@@ -7,7 +7,7 @@
  * @param fbuildname
  * @return
  */
-BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building pointer
+BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname) {
     FILE *bfile = fopen(fname, "r");
     if (bfile == NULL) {
         printf("File not Found - 404 read_buildings_file\n");
@@ -16,14 +16,12 @@ BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building poi
 
 
     STUDIO *aux = malloc(sizeof(STUDIO));
+    STUDIO *aux1;
     BUILDING *build = malloc(sizeof(BUILDING));
-    BUILDING_LIST *buildingList = read_buildings_to_list(fbuildname);
-    int i = 0;
 
     while (!feof(bfile)) {
-
+        aux1 = malloc(sizeof(STUDIO));
         aux->config = malloc(sizeof(aux->config));
-
         fscanf(bfile, "%d[^,]", &aux->id);
         fscanf(bfile, ",%d[^,]", &aux->number);
         fscanf(bfile, ",%d[^,]", &aux->building);
@@ -35,13 +33,17 @@ BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building poi
         build = find_specific_build(buildingList, aux->building);
 
         if (build != NULL) {
-            build->studios = aux;
+            if (build->nstudios == 0) {
+                build->studios = malloc(sizeof(STUDIO));
+            }
 
-            build->studios++;
-
+            aux1->config = malloc(sizeof(aux->config));
+            aux1 = build->studios + build->nstudios;
+            *aux1 = *aux;
+            build->nstudios++;
         }
-
     }
+
 
     fclose(bfile);
     return buildingList;

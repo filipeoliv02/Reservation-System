@@ -5,6 +5,23 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * @brief tipo de dados que define os estúdios
+ * @details contém a tipologia do estúdio (T2, T3...)
+ * aponta para o edifício a que pertence
+ * e contém a morada
+ */
+typedef struct studio {
+    int id;
+    int number;
+    int building;
+    char *config;
+    int area;
+} STUDIO;
+
+/**
+ * @brief Tipo de dados que define os edificios
+ */
 typedef struct building {
     int id;
     char *name;
@@ -13,7 +30,8 @@ typedef struct building {
     char *address;
     double priceperday;
     struct building *next;
-    struct studio *studios;
+    STUDIO *studios;
+    int nstudios;
 } BUILDING;
 
 typedef struct building_list {

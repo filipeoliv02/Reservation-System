@@ -14,10 +14,10 @@ int main() {
     //BUILDINGS
 
     BUILDING_LIST *buildingList = read_buildings_to_list("api_files/edificios.csv");
-    show_build_list(buildingList);
-printf("-----------------------\n");
-    buildingList = sort_buildings(buildingList);
-    show_build_list(buildingList);
+   //show_build_list(buildingList);
+    //printf("------------------------------------------------\n");
+    //buildingList = sort_buildings(buildingList);
+    //show_build_list(buildingList);
 
     //write_buildings_file(buildingList, "api_files/test2.csv");
     //add_buildings_to_list_tail(create_building(), buildingList);
@@ -26,7 +26,7 @@ printf("-----------------------\n");
     //find_specific_build(buildingList,4);
 
     //STUDIOS
-    //BUILDING_LIST *buildingList1 = read_studios_file("api_files/estudios.csv", "api_files/edificios.csv");
+    read_studios_file(buildingList, "api_files/estudios.csv");
     //write_studios_file(studio_array,"api_files/test.csv");
 
     return 0;

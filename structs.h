@@ -63,10 +63,7 @@ typedef struct platform {
   struct agenda agenda;
 } PLATFORM;
 
-/**
- * @brief Tipo de dados que define os edificios
- * @details contém o nome do edificio, e aponta para o proximo edificio
- */
+
 typedef struct building {
   int id;
   char* name;

@@ -6,21 +6,9 @@
 #include <string.h>
 #include "buildings.h"
 
-/**
- * @brief tipo de dados que define os estúdios
- * @details contém a tipologia do estúdio (T2, T3...)
- * aponta para o edifício a que pertence
- * e contém a morada
- */
-typedef struct studio {
-    int id;
-    int number;
-    int building;
-    char *config;
-    int area;
-} STUDIO;
 
-BUILDING_LIST *read_studios_file(char *fname, char *fbuildname);
+BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList ,char *fname);
+
 
 void write_studios_file(STUDIO *studio_array, char *fname);
 

@@ -212,6 +212,12 @@ BUILDING_LIST *delete_last_building_in_list(BUILDING_LIST *buildingList) {
 
 }
 
+/**
+ * @brief delete a building searching it first by his id
+ * @param buildingList
+ * @param id
+ * @return
+ */
 BUILDING_LIST *delete_specific_building(BUILDING_LIST *buildingList, int id) {
     if (buildingList == NULL) {
         printf("Building list is NULL - 404 delete_specific_building\n");
@@ -233,6 +239,13 @@ BUILDING_LIST *delete_specific_building(BUILDING_LIST *buildingList, int id) {
     return (buildingList);
 }
 
+/**
+ * @brief add a building at a specific position
+ * @param buildingList
+ * @param pos
+ * @param build
+ * @return
+ */
 BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILDING *build) {
     if (buildingList == NULL) {
         buildingList->size++;
@@ -259,7 +272,7 @@ BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILD
 }
 
 /**
- * Find specific build by his id
+ * @brief Find specific build by his id
  * @param buildingList
  * @param id
  * @return
@@ -282,6 +295,11 @@ BUILDING *find_specific_build(BUILDING_LIST *buildingList, int id) {
     return NULL;
 }
 
+/**
+ * @brief bubble sort to sort the building list
+ * @param buildingList
+ * @return
+ */
 BUILDING_LIST *sort_buildings(BUILDING_LIST *buildingList) {
     int swapped, i;
     BUILDING *aux;
@@ -307,6 +325,11 @@ BUILDING_LIST *sort_buildings(BUILDING_LIST *buildingList) {
     return (buildingList);
 }
 
+/**
+ * @brief swap function used at sort_buildings
+ * @param a
+ * @param b
+ */
 void swap(BUILDING *a, BUILDING *b) {
     int temp = a->id;
     a->id = b->id;
