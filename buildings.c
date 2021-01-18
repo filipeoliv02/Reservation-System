@@ -55,8 +55,8 @@ void write_buildings_file(BUILDING_LIST *buildingList, char *fname) {
  * @return a lista ligada
  */
 BUILDING_LIST *read_buildings_to_list(char *fname) {
-    FILE *bfile = fopen(fname, "r");
-    if (bfile == NULL) {
+            FILE *bfile = fopen(fname, "r");
+            if (bfile == NULL) {
         printf("File not Found - 404 read_buildings_file\n");
         exit(1);
     }

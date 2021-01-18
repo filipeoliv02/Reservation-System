@@ -10,5 +10,6 @@
 BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname);
 
 void write_studios_file(BUILDING_LIST *buildingList, char *fname);
+BUILDING *find_specific_studio(BUILDING_LIST *buildingList, int id);
 
 #endif
