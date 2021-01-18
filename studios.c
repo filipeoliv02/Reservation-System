@@ -42,7 +42,6 @@ BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname) {
         }
     }
 
-
     fclose(bfile);
     return buildingList;
 }
@@ -66,7 +65,12 @@ void write_studios_file(BUILDING_LIST *buildingList, char *fname) {
     }
     fclose(sfile);
 }
-
+/**
+ * Method to find a specific studion in a buildinglist
+ * @param buildingList
+ * @param id
+ * @return
+ */
 BUILDING *find_specific_studio(BUILDING_LIST *buildingList, int id) {
     if (buildingList == NULL) {
         printf("Building list is NULL - 404 find_specific_build\n");
@@ -87,7 +91,12 @@ BUILDING *find_specific_studio(BUILDING_LIST *buildingList, int id) {
 
 }
 
-
+/**
+ * Method to add a studio in a buildingLis
+ * @param buildingList
+ * @param buildid
+ * @return
+ */
 BUILDING_LIST *add_studio(BUILDING_LIST *buildingList, int buildid) {
 
     BUILDING *build = buildingList->pbuildings;
