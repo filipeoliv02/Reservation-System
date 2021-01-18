@@ -21,7 +21,6 @@ typedef struct building_list {
     int size;
 } BUILDING_LIST;
 
-
 /**
  * Ler do ficheiro build, apenas guarda a ultima linha
  * @param fname
@@ -71,6 +70,11 @@ BUILDING_LIST *delete_specific_building(BUILDING_LIST *buildingList, int id);
 
 BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILDING *build);
 
-BUILDING* find_specific_build (BUILDING_LIST *buildingList, int id);
+BUILDING *find_specific_build(BUILDING_LIST *buildingList, int id);
+
+BUILDING_LIST *sort_buildings(BUILDING_LIST *buildingList);
+
+void swap(BUILDING *a, BUILDING *b);
+
 
 #endif

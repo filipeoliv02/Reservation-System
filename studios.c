@@ -14,10 +14,11 @@ BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building poi
         exit(1);
     }
 
-    STUDIO *studios = malloc(sizeof(STUDIO));
-    STUDIO *aux = studios;
-    //BUILDING_LIST *buildingList= malloc (sizeof(struct building_list));
-    BUILDING_LIST *buildingList =read_buildings_to_list(fbuildname);
+
+    STUDIO *aux = malloc(sizeof(STUDIO));
+    BUILDING *build = malloc(sizeof(BUILDING));
+    BUILDING_LIST *buildingList = read_buildings_to_list(fbuildname);
+    int i = 0;
 
     while (!feof(bfile)) {
 
@@ -30,18 +31,22 @@ BUILDING_LIST *read_studios_file(char *fname, char *fbuildname) { //building poi
         fscanf(bfile, ",%d[^,]s", &aux->area);
         printf("%d %d %d %s %d \n", aux->id, aux->number, aux->building, aux->config, aux->area);
 
-        STUDIO *aux = malloc(sizeof(STUDIO));
 
-        BUILDING *build = find_specific_build(buildingList,studios->building);
-        if(build!= NULL){
-            build->studios = studios;
+        build = find_specific_build(buildingList, aux->building);
+
+        if (build != NULL) {
+            build->studios = aux;
+
+            build->studios++;
+
         }
-        aux++;
+
     }
 
     fclose(bfile);
     return buildingList;
 }
+
 
 void write_studios_file(STUDIO *studio_array, char *fname) {
     FILE *sfile = fopen(fname, "w");

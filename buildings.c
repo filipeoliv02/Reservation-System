@@ -264,17 +264,51 @@ BUILDING_LIST *add_specific_building(BUILDING_LIST *buildingList, int pos, BUILD
  * @param id
  * @return
  */
-BUILDING* find_specific_build (BUILDING_LIST *buildingList, int id) {
+BUILDING *find_specific_build(BUILDING_LIST *buildingList, int id) {
     if (buildingList == NULL) {
         printf("Building list is NULL - 404 find_specific_build\n");
-        return 0;
+        return NULL;
     }
 
     BUILDING *aux = buildingList->pbuildings;
 
-    for (int i = 0;  aux->id!=id ; i++ || i <= buildingList->size ) {
+    for (int i = 0; buildingList->size; i++) {
+        if (aux->id == id) {
+            return (aux);
+        }
         aux = aux->next;
     }
+    printf("404 NOT FOUND - FIND_SPECIFIC_BUILD\n");
+    return NULL;
+}
 
-    return (aux);
+BUILDING_LIST *sort_buildings(BUILDING_LIST *buildingList) {
+    int swapped, i;
+    BUILDING *aux;
+    BUILDING *aux1 = NULL;
+    /* Checking for empty list */
+    if (buildingList->pbuildings == NULL) {
+        printf("Building list is NULL - 404 sort_buildings\n");
+        return NULL;
+    }
+    do {
+        swapped = 0;
+        aux = buildingList->pbuildings;
+
+        while (aux->next != aux1) {
+            if (aux->id > aux->next->id) {
+                swap(aux, aux->next);
+                swapped = 1;
+            }
+            aux = aux->next;
+        }
+        aux1 = aux;
+    } while (swapped);
+    return (buildingList);
+}
+
+void swap(BUILDING *a, BUILDING *b) {
+    int temp = a->id;
+    a->id = b->id;
+    b->id = temp;
 }
