@@ -65,26 +65,23 @@ void write_studios_file(BUILDING_LIST *buildingList, char *fname) {
         build = build->next;
     }
 }
+
 BUILDING *find_specific_studio(BUILDING_LIST *buildingList, int id) {
     if (buildingList == NULL) {
         printf("Building list is NULL - 404 find_specific_build\n");
         return NULL;
     }
-
-    BUILDING *aux = buildingList->pbuildings;
     BUILDING *build = buildingList->pbuildings;
+    for (int j = 0; j < buildingList->size - 1; j++) {
+        for (int i = 0; i < build->nstudios; i++) {
+            if (build->studios->id == id) {
+                return build;
+            }
 
-    for (int i = 0; buildingList->pbuildings; i++) {
-        for (int i=build->nstudios;aux->studios->id == id; i--);{
-            return (aux);
+            build->studios++;
         }
-
+        build = build->next;
     }
-    aux = aux->next;
-
-    return build;
-    printf("404 NOT FOUND - FIND_SPECIFIC_BUILD\n");
-
     return NULL;
 
 }
