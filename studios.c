@@ -5,7 +5,7 @@
  * Read Studios in txt to link with list of buildings
  * @param fname
  * @param fbuildname
- * @return
+ * @return a
  */
 BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname) {
     FILE *bfile = fopen(fname, "r");
