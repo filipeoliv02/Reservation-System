@@ -28,9 +28,11 @@ int main() {
     //STUDIOS
 
     buildingList = read_studios_file(buildingList, "api_files/estudios.csv");
+    buildingList = add_studio(buildingList, 1);
     //write_studios_file(buildingList, "api_files/test.csv");
-    find_specific_build(buildingList,4);
-    find_specific_studio(buildingList, 34);
+
+    //find_specific_build(buildingList,4);
+    //find_specific_studio(buildingList, 34);
 
 
 

@@ -14,11 +14,23 @@ stdlib.h
 string.h
 -
 
-/home/filipe/Projects/Gestor_de_Reservas-C/studios.c
-studios.h
-/home/filipe/Projects/Gestor_de_Reservas-C/studios.h
+/home/filipe/Projects/Gestor_de_Reservas-C/events.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/filipe/Projects/Gestor_de_Reservas-C/main.c
+stdio.h
+-
 buildings.h
 /home/filipe/Projects/Gestor_de_Reservas-C/buildings.h
+events.h
+/home/filipe/Projects/Gestor_de_Reservas-C/events.h
+studios.h
+/home/filipe/Projects/Gestor_de_Reservas-C/studios.h
 
 /home/filipe/Projects/Gestor_de_Reservas-C/studios.h
 stdio.h

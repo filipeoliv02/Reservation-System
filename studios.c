@@ -64,6 +64,7 @@ void write_studios_file(BUILDING_LIST *buildingList, char *fname) {
         }
         build = build->next;
     }
+    fclose(sfile);
 }
 
 BUILDING *find_specific_studio(BUILDING_LIST *buildingList, int id) {
@@ -85,3 +86,28 @@ BUILDING *find_specific_studio(BUILDING_LIST *buildingList, int id) {
     return NULL;
 
 }
+
+
+BUILDING_LIST *add_studio(BUILDING_LIST *buildingList, int buildid) {
+
+    BUILDING *build = buildingList->pbuildings;
+
+    for (int i = 0; i < buildingList->size - 1; i++) {
+
+        if (build->id == buildid) {
+            for (int j = 0; j < build->nstudios; j++) {
+                build->studios++;
+            }
+            build->studios->id = 51;  //hardcoded easy to resolve
+            build->studios->number = 45;
+            build->studios->building = buildid;
+            build->studios->config = "T6";
+            build->studios->area = 999;
+            return buildingList;
+        }
+        build = build->next;
+    }
+    return NULL;
+}
+
+
