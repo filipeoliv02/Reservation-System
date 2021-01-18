@@ -2,10 +2,10 @@
 #include "buildings.h"
 
 /**
- * Read Studios in txt to link with list of buildings
+ * @brief Read Studios in txt to link with list of buildings
  * @param fname
  * @param fbuildname
- * @return a
+ * @return
  */
 BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname) {
     FILE *bfile = fopen(fname, "r");
@@ -13,8 +13,6 @@ BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname) {
         printf("File not Found - 404 read_buildings_file\n");
         exit(1);
     }
-
-
     STUDIO *aux = malloc(sizeof(STUDIO));
     STUDIO *aux1;
     BUILDING *build = malloc(sizeof(BUILDING));
@@ -49,21 +47,22 @@ BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname) {
     return buildingList;
 }
 
-
-void write_studios_file(STUDIO *studio_array, char *fname) {
+/**
+ * @brief Write Studios in txt from building List
+ * @param buildingList
+ * @param fname
+ * @return
+ */
+void write_studios_file(BUILDING_LIST *buildingList, char *fname) {
     FILE *sfile = fopen(fname, "w");
-
-    if (fname == NULL) {
-        printf("File not Found - 404 write_studios_file\n");
-        exit(1);
-    }
-
-    while (studio_array != NULL) {
-
-        studio_array->config = malloc(sizeof(studio_array->config));
-        fprintf(sfile, "%d,%d,%d,%s,%d\n", studio_array->id, studio_array->number,
-                studio_array->building, studio_array->config, studio_array->area);
-        studio_array++;
+    BUILDING *build = buildingList->pbuildings;
+    for (int j = 0; j < buildingList->size - 1; j++) {
+        for (int i = 0; i < build->nstudios; i++) {
+            fprintf(sfile, "%d,%d,%d,%s,%d\n", build->studios->id, build->studios->number, build->studios->building,
+                    build->studios->config, build->studios->area);
+            build->studios++;
+        }
+        build = build->next;
     }
 }
 

@@ -7,10 +7,8 @@
 #include "buildings.h"
 
 
-BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList ,char *fname);
+BUILDING_LIST *read_studios_file(BUILDING_LIST *buildingList, char *fname);
 
-
-void write_studios_file(STUDIO *studio_array, char *fname);
-
+void write_studios_file(BUILDING_LIST *buildingList, char *fname);
 
 #endif
