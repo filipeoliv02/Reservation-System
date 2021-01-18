@@ -88,7 +88,9 @@ BUILDING_LIST *read_buildings_to_list(char *fname) {
             //L->address=build.address;
             fscanf(bfile, ",%lf[^\n]", &L->priceperday);
             //L->priceperday=build.priceperday;
+            L->nstudios=0;
             aux = L;
+
         } else {
 
             aux->next = (BUILDING *) malloc(1 * sizeof(BUILDING));
@@ -107,6 +109,7 @@ BUILDING_LIST *read_buildings_to_list(char *fname) {
             //aux->address=build.address;
             fscanf(bfile, ",%lf[^\n]", &aux->priceperday);
             //aux->priceperday=build.priceperday;
+            aux->nstudios=0;
             aux->next = NULL;
         }
     }

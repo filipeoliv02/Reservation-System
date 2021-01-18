@@ -8,99 +8,97 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug"/>
+				<Option working_dir="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AED1_LP1">
-				<Option output="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/AED1_LP1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug"/>
+				<Option output="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/AED1_LP1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED1_LP1"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED1_LP1"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AED1_LP1/fast">
-				<Option output="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/AED1_LP1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug"/>
+				<Option output="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/AED1_LP1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED1_LP1/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/filipe/Projects/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED1_LP1/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Documents/Gestor_de_Reservas-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/Gestor_de_Reservas-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/buildings.c">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/buildings.c">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/buildings.h">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/buildings.h">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/events.c">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/events.c">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/events.h">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/events.h">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/main.c">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/main.c">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/structs.h">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/structs.h">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/studios.c">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/studios.c">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/studios.h">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/studios.h">
 			<Option target="AED1_LP1"/>
 		</Unit>
-		<Unit filename="/home/filipe/Projects/Gestor_de_Reservas-C/CMakeLists.txt">
+		<Unit filename="D:/Documents/Gestor_de_Reservas-C/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
